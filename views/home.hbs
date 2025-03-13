@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/homeStyles.css">
+</head>
+<body>
+
+<br>
+  <div id="header">
+    <h1>Welcome, {{ fullName }}</h1>
+  </div>
+
+  {{#if isAdmin}}
+    {{!-- <div class="ap-btn">
+      <form action="/adminPanel" method="GET">
+        <button type="submit">Admin Panel</button>
+      </form>
+    </div> --}}
+    <title>Admin Panel</title>
+
+    <div class="container">
+    <div id="content-container">
+      <div id="menu">
+        <div class="title-name">Admin Menu</div>
+          <a href = "/adminUpdate"> Update User Role </a> <br>
+          <a href = "/adminDelete"> Delete a User </a> <br>
+        </div>
+      </div>
+    </div>
+{{else}}
+  <title>User Home</title>
+
+    <div class="container">
+    <div id="content-container">
+      <div id="menu">
+        <div class="title-name">Asset Menu</div>
+          <a href = "newAsset.html"> Register Asset </a> <br>
+          <a href = "updateAsset.html"> Update Asset Information </a> <br>
+          <a href = "deleteAsset.html"> Deleting a wrongly encoded Asset </a> <br>
+        </div>
+      </div>
+    </div>
+
+    {{!-- CREATE POST --}}
+    <div class="container">
+    <form action="/createPost" method="POST">
+        <div class="title-name">Create Post</div>
+        <input type="text" id="user_post" style="width: 450px; border-radius: 5px; margin-bottom: 10px; padding: 8px" placeholder="Enter text here" name="user_post" value="{{user_post}}" required><br>       
+        <button type="submit" class="post-button">Post</button>
+    </form>
+    </div>
+    
+
+    {{!-- BASIC FORM 
+    <form action="/createPost" method="POST">
+        <label for="user_post">Your Message:</label><br>
+        <input type="text" id="user_post" name="user_post" value="{{user_post}}" required><br>
+        <button type="submit">Post</button>
+    </form>
+    --}}
+    
+    {{!-- NEWSFEED --}}
+  <div class="container">
+    <div class="title-name">News Feed</div>
+    {{#each this.data.data}}
+      <div class="post">
+        <p><strong>{{user}} ({{type}})</strong>: {{post}}</p>
+        <p class="timestamp">Post ID: {{id}}</p>
+      </div>
+    {{/each}}
+  </div>
+
+  {{/if}}
+
+  <div class="user-container">
+    <img src="data:{{ imageType }};base64,{{ image }}" alt="Profile Picture">
+      
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+
+
+</body>
+</html>

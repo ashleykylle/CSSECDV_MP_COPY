@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --primary: #F1F0F0;
+  --secondary: #0B6D5C;
+  --accent1: white;
+  --accent2: black;
+  --accent3: #FF914D;
+  --box-shadow: #D6D6D6;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--primary);
+    color: var(--accent2);
+    text-align: center;
+}
+  
+  .container {
+    max-width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--box-shadow);
+  }
+
+  .post {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  .timestamp {
+    font-size: 12px;
+    color: black;
+  }
+
+  #header {
+    color: var(--accent2);
+    border: 1px solid var(--primary);
+  }
+  
+  .user-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    gap: 10px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--accent2);
+    float: right;
+
+  }
+  
+  button {
+    background-color: transparent;
+    color: var(--accent2);
+    border-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    float: right;
+  }
+  
+  #content-container {
+    display: flex;
+    justify-content: center;
+}
+
+  #menu {
+    border-radius: 10px;
+    padding: 15px 20px 20px;
+  }
+  .title-name {
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--accent3);
+    margin-bottom: 10px;
+  }
+
+  #submit {
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .post-button {
+    background-color: #28a745; /* Change to your preferred color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.post-button:hover {
+    background-color: #218838;
+}
+
+
+  #menu a {
+    color: var(--accent1);
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+#menu a:hover, button:hover {
+  color: var(--accent3)
+}
+
+.ap-btn {
+  color: var(--accent2);
+  border-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.ap-btn button {
+  background-color: var(--accent3);
+  padding: 12px 20px;
+}
+
+.ap-btn button:hover {
+  color: var(--accent1)
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --primary: #F1F0F0;
+  --secondary: #0B6D5C;
+  --accent1: white;
+  --accent2: black;
+  --accent3: #FF914D;
+  --box-shadow: #292626bc;
+  --delete-btn: #E74C3C;
+  --delete-hover: #AD3325;
+  --update-hover: #d06d2e;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--secondary);
+    color: var(--accent2);
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--accent2);
+  }
+  
+  .admin-panel {
+    background-color: var(--accent1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--box-shadow);
+    width: 600px;
+    text-align: center;
+  }
+  
+  .admin-panel h2 {
+    margin-bottom: 20px;
+    color: var(--accent2);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: var(--accent3);
+    color: var(--accent2);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--accent2);
+  }
+  
+  th:last-child, td:last-child {
+    text-align: center;
+  }
+  
+  .delete-user {
+    background-color: var(--delete-btn);
+    color: var(--accent1);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-user:hover {
+    background-color: var(--delete-hover);
+  }
+  
+  .back {
+    background-color: var(--accent3);
+    color: var(--accent2);
+    padding: 12px 24px;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .back:hover {
+    border-color: var(--accent2);
+  }
+
+  select {
+    border: var(--accent2) solid 1px;
+    font-family: "Poppins";
+    font-size: 16px;
+  }
+
+  option {
+    font-family: "Poppins";
+  }
+
+  .update-user {
+    background-color: var(--accent3);
+    color: var(--accent2);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .update-user:hover {
+    background-color: var(--update-hover);
+  }

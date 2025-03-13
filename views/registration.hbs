@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registrationStyles.css">
+    <title>Registration Page</title>
+  </head>
+  <body>
+
+    <div class="registration-container">
+      <h2>Create an Account</h2>
+      <form action="/register" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" value="{{name}}" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="{{email}}" required>
+          <!-- Add this div for email error message -->
+          <div id="email-error" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" value="{{password}}" required>
+          <!-- Add this div for password error message -->
+          <div id="password-error" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" value="{{phone}}" required>
+          <!-- Add this div for phone error message -->
+          <div id="phone-error" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="profile-photo">Profile Photo</label>
+          <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="register-button">Register</button>
+        </div>
+        
+        <div class="form-group">
+          <p>Already have an account? <a href="/login" id="login-link">Login</a></p>
+        </div>
+
+        <div class="form-group">
+          <div id="reg-error" class="error-message">
+            {{#if regError}}
+              <p>{{regError}}</p>
+            {{/if}}
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+
+  </body>
+  <script defer src="public/js/script.js"></script>
+</html>

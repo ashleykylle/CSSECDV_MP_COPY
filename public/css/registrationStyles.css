@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --primary: #F1F0F0;
+  --secondary: #0B6D5C;
+  --accent1: white;
+  --accent2: black;
+  --accent3: #FF914D;
+  --box-shadow: #D6D6D6;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--secondary);
+    color: var(--accent2);
+}
+  
+  .registration-container {
+    background-color: var(--accent1);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .registration-container h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--secondary);
+  }
+  
+  .form-group input, .form-group button, .form-group small {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    color: var(--secondary);
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    border: 4px solid var(--accent3);
+  }
+
+  .form-group .error-message {
+    color: red;
+    font-size: 12px;
+  }
+
+  .form-group small {
+    color: #7f8c8d;
+    display: block;
+  }
+  
+  .form-group button {
+    background-color: var(--accent3);
+    color: var(--accent1);
+    border-radius: 25px;
+    padding: 7px 40px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border-color: transparent;
+    width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group button:hover {
+    border-color: var(--accent2);
+  }
+  
+  #login-link {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  
+  #login-link:hover {
+    color: var(--accent3);
+  }
+  

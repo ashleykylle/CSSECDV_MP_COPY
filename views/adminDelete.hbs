@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/adminPanelStyles.css">
+  <title>Admin Panel | Delete an Account</title>
+</head>
+<body>
+
+  <div class="admin-panel">
+    <h2>Delete an Account</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each users}}
+          <tr>
+              <td>{{this.id}}</td>
+              <td>{{this.name}}</td>
+              <td>{{this.email}}</td>
+              <td>{{this.user_type}}</td>
+              <td>
+                <form action="/delete/{{this.id}}" method="POST">
+                  <button type="submit" class="delete-user">Delete</button>
+                </form>
+              </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <form action="/home" method="GET">
+      <button type="submit" class="back">Back</button>
+    </form>
+
+
+  </div>
+
+</body>
+</html>
